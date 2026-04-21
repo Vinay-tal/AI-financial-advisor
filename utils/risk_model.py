@@ -11,6 +11,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.pipeline import Pipeline
 import joblib
 import os
+import streamlit as st
 
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "..", "models", "risk_model.joblib")
 FEATURE_COLS = [
@@ -25,6 +26,7 @@ FEATURE_COLS = [
 ]
 
 
+@st.cache_data(show_spinner=False)
 def train_model(features_df: pd.DataFrame):
     """Train risk prediction model on monthly features."""
     os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)

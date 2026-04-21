@@ -21,7 +21,7 @@ from utils.india_processor import (
     generate_india_recommendations, benchmark_comparison,
     INDIA_CATEGORY_COLORS, INDIA_CATEGORY_ICONS, INDIA_BENCHMARKS,
 )
-from utils.risk_model import train_model, predict_risk, get_feature_importance
+from utils.risk_model import train_model, predict_risk, get_feature_importance, FEATURE_COLS
 from utils.ai_advisor import get_ai_response
 
 # ─────────────────────────────────────────────────────────────
@@ -34,8 +34,6 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
-
 :root {
     --bg: #080f1a; --card: #0f1d2e; --card2: #162236;
     --saffron: #ff9933; --white: #f8f8f8; --green: #138808;
@@ -439,13 +437,15 @@ with tab2:
     with col_detail:
         if features_df is not None and not features_df.empty and model is not None:
             st.markdown("**📅 Monthly Risk History**")
-            risk_hist = []
-            for _, row in features_df.iterrows():
-                r = predict_risk(model, row.to_dict())
-                risk_hist.append({"month": row["month"], "risk_%": r["risk_probability"]*100,
-                                   "expense_ratio_%": row["expense_ratio"]*100,
-                                   "emi_ratio_%": row.get("emi_ratio",0)*100})
-            rh = pd.DataFrame(risk_hist)
+            feat_matrix = features_df[FEATURE_COLS].fillna(0)
+            risk_probs = model.predict_proba(feat_matrix)[:, 1]
+            emi_ratios = features_df["emi_ratio"].values if "emi_ratio" in features_df.columns else 0
+            rh = pd.DataFrame({
+                "month": features_df["month"].values,
+                "risk_%": risk_probs * 100,
+                "expense_ratio_%": features_df["expense_ratio"].values * 100,
+                "emi_ratio_%": emi_ratios * 100,
+            })
             fig_rh = go.Figure()
             fig_rh.add_trace(go.Bar(name="Risk %", x=rh["month"], y=rh["risk_%"],
                                      marker_color=["#ef4444" if v>65 else "#f59e0b" if v>35 else "#22c55e"
