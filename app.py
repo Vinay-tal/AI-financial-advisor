@@ -534,7 +534,8 @@ with tab1:
 
     # Row 4: Recent transactions
     st.markdown('<div class="section-header">🧾 Recent Transactions</div>', unsafe_allow_html=True)
-    recent = df.tail(20)[["date", "description", "category", "amount", "balance"]].copy()
+    recent_cols = ["date", "description", "category", "amount"] + (["balance"] if "balance" in df.columns else [])
+    recent = df.tail(20)[recent_cols].copy()
     recent["date"] = recent["date"].dt.strftime("%b %d, %Y")
     recent["amount"] = recent["amount"].apply(lambda x: f"+${x:,.2f}" if x > 0 else f"-${abs(x):,.2f}")
     st.dataframe(recent.iloc[::-1], use_container_width=True, height=320,
