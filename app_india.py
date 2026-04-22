@@ -27,10 +27,15 @@ from utils.ai_advisor import get_ai_response
 # ─────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="FinSight India — UPI Financial Analyzer",
-    page_icon="🇮🇳",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded",
 )
+st.markdown("""
+<style>
+[data-testid="collapsedControl"] { display: none !important; }
+</style>
+""", unsafe_allow_html=True)
 
 st.markdown("""
 <style>
