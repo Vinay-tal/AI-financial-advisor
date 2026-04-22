@@ -4,6 +4,7 @@ India-specific financial analytics — categories, benchmarks, recommendations
 
 import pandas as pd
 import numpy as np
+import streamlit as st
 
 
 # ── Indian Category Config ────────────────────────────────────
@@ -69,6 +70,7 @@ INDIA_BENCHMARKS = {
 }
 
 
+@st.cache_data(show_spinner=False)
 def get_india_monthly_summary(df: pd.DataFrame) -> pd.DataFrame:
     monthly = df.groupby("month").agg(
         total_income=("amount", lambda x: x[x > 0].sum()),
@@ -85,6 +87,7 @@ def get_india_monthly_summary(df: pd.DataFrame) -> pd.DataFrame:
     return monthly
 
 
+@st.cache_data(show_spinner=False)
 def get_india_category_breakdown(df: pd.DataFrame, month: str = None) -> pd.DataFrame:
     data = df[df["amount"] < 0].copy()
     if month:
@@ -100,11 +103,13 @@ def get_india_category_breakdown(df: pd.DataFrame, month: str = None) -> pd.Data
     return breakdown
 
 
+@st.cache_data(show_spinner=False)
 def get_india_spending_trends(df: pd.DataFrame) -> pd.DataFrame:
     expenses = df[df["amount"] < 0].copy()
     return expenses.groupby(["month", "category"])["abs_amount"].sum().reset_index()
 
 
+@st.cache_data(show_spinner=False)
 def benchmark_comparison(df: pd.DataFrame) -> list:
     """Compare user spending vs Indian household benchmarks."""
     cat = get_india_category_breakdown(df)
@@ -140,6 +145,7 @@ def benchmark_comparison(df: pd.DataFrame) -> list:
     return sorted(results, key=lambda x: x["ratio"], reverse=True)
 
 
+@st.cache_data(show_spinner=False)
 def compute_india_risk_features(df: pd.DataFrame) -> pd.DataFrame:
     records = []
     for month, grp in df.groupby("month"):
@@ -184,6 +190,7 @@ def compute_india_risk_features(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(records)
 
 
+@st.cache_data(show_spinner=False)
 def generate_india_recommendations(df: pd.DataFrame, risk_score: float, monthly: pd.DataFrame) -> list:
     recs = []
     cat = get_india_category_breakdown(df)

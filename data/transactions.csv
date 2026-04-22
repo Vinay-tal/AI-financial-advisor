@@ -1,0 +1,91 @@
+date,description,amount,type,category,balance
+2024-01-01,Opening Balance,5000.00,credit,Income,5000.00
+2024-01-02,Salary Deposit,3500.00,credit,Income,8500.00
+2024-01-03,Rent Payment,-1200.00,debit,Housing,7300.00
+2024-01-04,Grocery Store,-85.50,debit,Groceries,7214.50
+2024-01-05,Netflix Subscription,-15.99,debit,Entertainment,7198.51
+2024-01-06,Gas Station,-45.00,debit,Transport,7153.51
+2024-01-07,Restaurant Dinner,-67.80,debit,Dining,7085.71
+2024-01-08,Online Shopping,-120.00,debit,Shopping,6965.71
+2024-01-09,Electricity Bill,-95.00,debit,Utilities,6870.71
+2024-01-10,Coffee Shop,-12.50,debit,Dining,6858.21
+2024-01-11,Gym Membership,-50.00,debit,Health,6808.21
+2024-01-12,Grocery Store,-92.30,debit,Groceries,6715.91
+2024-01-13,Movie Theater,-25.00,debit,Entertainment,6690.91
+2024-01-14,Pharmacy,-35.00,debit,Health,6655.91
+2024-01-15,Online Transfer,-200.00,debit,Savings,6455.91
+2024-01-16,Fast Food,-18.75,debit,Dining,6437.16
+2024-01-17,Clothing Store,-150.00,debit,Shopping,6287.16
+2024-01-18,Internet Bill,-60.00,debit,Utilities,6227.16
+2024-01-19,Coffee Shop,-11.00,debit,Dining,6216.16
+2024-01-20,Gas Station,-50.00,debit,Transport,6166.16
+2024-01-21,Grocery Store,-78.00,debit,Groceries,6088.16
+2024-01-22,Bar/Drinks,-75.00,debit,Entertainment,6013.16
+2024-01-23,Online Shopping,-89.99,debit,Shopping,5923.17
+2024-01-24,Restaurant,-55.00,debit,Dining,5868.17
+2024-01-25,Freelance Income,800.00,credit,Income,6668.17
+2024-01-26,Coffee Shop,-9.50,debit,Dining,6658.67
+2024-01-27,Grocery Store,-110.00,debit,Groceries,6548.67
+2024-01-28,Streaming Service,-14.99,debit,Entertainment,6533.68
+2024-01-29,Gas Station,-42.00,debit,Transport,6491.68
+2024-01-30,Restaurant,-80.00,debit,Dining,6411.68
+2024-01-31,Impulse Purchase,-200.00,debit,Shopping,6211.68
+2024-02-01,Salary Deposit,3500.00,credit,Income,9711.68
+2024-02-02,Rent Payment,-1200.00,debit,Housing,8511.68
+2024-02-03,Grocery Store,-95.00,debit,Groceries,8416.68
+2024-02-04,Coffee Shop,-10.50,debit,Dining,8406.18
+2024-02-05,Netflix Subscription,-15.99,debit,Entertainment,8390.19
+2024-02-06,Electric Bill,-102.00,debit,Utilities,8288.19
+2024-02-07,Gas Station,-48.00,debit,Transport,8240.19
+2024-02-08,Restaurant,-72.00,debit,Dining,8168.19
+2024-02-09,Online Shopping,-250.00,debit,Shopping,7918.19
+2024-02-10,Pharmacy,-28.00,debit,Health,7890.19
+2024-02-11,Gym Membership,-50.00,debit,Health,7840.19
+2024-02-12,Grocery Store,-88.00,debit,Groceries,7752.19
+2024-02-13,Movie Tickets,-30.00,debit,Entertainment,7722.19
+2024-02-14,Valentine Dinner,-150.00,debit,Dining,7572.19
+2024-02-15,Online Transfer,-200.00,debit,Savings,7372.19
+2024-02-16,Coffee Shop,-12.00,debit,Dining,7360.19
+2024-02-17,Gas Station,-55.00,debit,Transport,7305.19
+2024-02-18,Grocery Store,-79.50,debit,Groceries,7225.69
+2024-02-19,Internet Bill,-60.00,debit,Utilities,7165.69
+2024-02-20,Fast Food,-22.00,debit,Dining,7143.69
+2024-02-21,Online Shopping,-175.00,debit,Shopping,6968.69
+2024-02-22,Concert Tickets,-120.00,debit,Entertainment,6848.69
+2024-02-23,Restaurant,-65.00,debit,Dining,6783.69
+2024-02-24,Freelance Income,600.00,credit,Income,7383.69
+2024-02-25,Grocery Store,-105.00,debit,Groceries,7278.69
+2024-02-26,Coffee Shop,-11.50,debit,Dining,7267.19
+2024-02-27,Gas Station,-40.00,debit,Transport,7227.19
+2024-02-28,Impulse Electronics,-350.00,debit,Shopping,6877.19
+2024-03-01,Salary Deposit,3500.00,credit,Income,10377.19
+2024-03-02,Rent Payment,-1200.00,debit,Housing,9177.19
+2024-03-03,Grocery Store,-91.00,debit,Groceries,9086.19
+2024-03-04,Coffee Shop,-13.00,debit,Dining,9073.19
+2024-03-05,Netflix Subscription,-15.99,debit,Entertainment,9057.20
+2024-03-06,Electric Bill,-98.00,debit,Utilities,8959.20
+2024-03-07,Gas Station,-52.00,debit,Transport,8907.20
+2024-03-08,Restaurant,-68.00,debit,Dining,8839.20
+2024-03-09,Online Shopping,-95.00,debit,Shopping,8744.20
+2024-03-10,Pharmacy,-42.00,debit,Health,8702.20
+2024-03-11,Gym Membership,-50.00,debit,Health,8652.20
+2024-03-12,Grocery Store,-82.00,debit,Groceries,8570.20
+2024-03-13,Streaming Service,-9.99,debit,Entertainment,8560.21
+2024-03-14,Coffee Shop,-10.00,debit,Dining,8550.21
+2024-03-15,Online Transfer,-300.00,debit,Savings,8250.21
+2024-03-16,Gas Station,-47.00,debit,Transport,8203.21
+2024-03-17,Grocery Store,-76.00,debit,Groceries,8127.21
+2024-03-18,Internet Bill,-60.00,debit,Utilities,8067.21
+2024-03-19,Fast Food,-19.50,debit,Dining,8047.71
+2024-03-20,Online Shopping,-130.00,debit,Shopping,7917.71
+2024-03-21,Restaurant,-58.00,debit,Dining,7859.71
+2024-03-22,Coffee Shop,-14.00,debit,Dining,7845.71
+2024-03-23,Grocery Store,-99.00,debit,Groceries,7746.71
+2024-03-24,Bar/Drinks,-60.00,debit,Entertainment,7686.71
+2024-03-25,Freelance Income,1000.00,credit,Income,8686.71
+2024-03-26,Gas Station,-44.00,debit,Transport,8642.71
+2024-03-27,Restaurant,-75.00,debit,Dining,8567.71
+2024-03-28,Online Shopping,-220.00,debit,Shopping,8347.71
+2024-03-29,Coffee Shop,-12.00,debit,Dining,8335.71
+2024-03-30,Grocery Store,-88.00,debit,Groceries,8247.71
+2024-03-31,Impulse Purchase,-180.00,debit,Shopping,8067.71
