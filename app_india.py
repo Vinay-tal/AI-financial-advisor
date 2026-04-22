@@ -536,9 +536,9 @@ with tab3:
                 fig_bench.add_trace(go.Bar(name="India Average", x=bench_df["category"],
                                            y=bench_df["avg_india"], marker_color="#1a73e8", opacity=0.6))
                 fig_bench.update_layout(**PLOTLY_LAYOUT, barmode="group", height=350,
-                                         yaxis_title="₹/month",
-                                         legend=dict(orientation="h",y=1.08),
-                                         xaxis=dict(tickangle=-30))
+                         yaxis_title="₹/month",
+                         legend=dict(orientation="h",y=1.08))
+                fig_bench.update_xaxes(tickangle=-30)
                 st.plotly_chart(fig_bench, use_container_width=True)
 
                 # Radar chart
